@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+  <div id="app"></div>
+  
+  <!-- Load game scripts directly (No modules, works on double-click!) -->
+  <script src="./src/games/word-guess.js"></script>
+  <script src="./src/games/emoji-guess.js"></script>
+  <script src="./src/games/bubble-shooter.js"></script>
+  <script src="./src/games/block-blast.js"></script>
+  <script src="./src/games/color-sort.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
