@@ -103,6 +103,8 @@
     <script src="{{asset("admin")}}/vendors/jquery-detectmobile/detect.js"></script>
     <script src="{{asset("admin")}}/vendors/fastclick/fastclick.js"></script>
     <script src="{{asset("admin")}}/vendors/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- sweet alerts -->
+    <script src="{{asset("admin")}}/vendors/sweet-alert/sweet-alert.min.js"></script>
 
 
     <!-- Counter-up -->
@@ -130,6 +132,23 @@
         });
     </script>
 
+    <script>
+        function confirmAction(e, link, title, text) {
+            e.preventDefault();
+            swal({
+                title: title || "Are you sure?",
+                text: text || "You will not be able to recover this data!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, I am sure!",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false
+            }, function(){
+                window.location.href = link.href;
+            });
+        }
+    </script>
 </body>
 
 </html>
